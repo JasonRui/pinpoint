@@ -226,6 +226,7 @@
 						$event.stopPropagation();
 					}
 				};
+
 				scope.onSearchKeydown = function( $event ) {
 					if ( $event.keyCode == 13 ) { // Enter
 						scope.onSearch();
@@ -460,8 +461,9 @@
 		return reg.test(email);
 	}
 	function validatePhone( phone ) {
-		var reg = /^\d+$/;
-		return reg.test(phone);
+		return true;
+		/*var reg = /^\d+$/;
+		return reg.test(phone);*/
 	}
 	function addBlink( a ) {
 		$.each( a, function( index, $el ) {
